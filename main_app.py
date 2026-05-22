@@ -7,7 +7,7 @@ import pickle
 import time
 import os
 
-st.set_page_config(page_title="Cat Breeds Classifier", page_icon="🐱", layout="centered")
+st.set_page_config(page_title="Cat Breeds Classifier", layout="centered")
 
 # Inject custom CSS for premium aesthetics
 st.markdown("""
@@ -149,7 +149,7 @@ if uploaded_file is not None:
         image = Image.open(uploaded_file).convert('RGB')
         st.image(image, use_container_width=True)
         
-    if st.button("Identify Breed 🐾", use_container_width=True):
+    if st.button("Identify Breed", use_container_width=True):
         with st.spinner("Analyzing feline features..."):
             # Simulate a small delay for dramatic effect
             time.sleep(1)
